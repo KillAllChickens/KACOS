@@ -123,7 +123,7 @@ navigation: widget
 strings:
     productName:         "KAC-OS"
     shortProductName:    KACOS
-    version:             2025.7
+    version:             2025.7 "Kill 'Em All"
     shortVersion:        2025.7
     versionedName:       KACOS 2025.7 "Kill 'Em All"
     shortVersionedName:  KACOS 2025.7
