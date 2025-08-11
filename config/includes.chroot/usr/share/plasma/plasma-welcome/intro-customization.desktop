@@ -1,0 +1,20 @@
+[Desktop Entry]
+# Required since this is a Desktop file; ignored
+Type=Application
+
+# Required; becomes the first paragraph on the Welcome page
+# Don't forget to offer translations of the text!
+Name=Welcome to KACOS! This is just a hobby project. Made and maintained by Vance Perry(Epicman212). Have fun!
+#Name[fr]=Bienvenue sur NateOS! C'est le meilleur système d'exploitation du monde, justqu'à qu'il esplose. Saviez-vous que c'est intentionnel? C'est écrit sur la boîte!
+
+# Optional; replaces the default image on the Welcome page
+# can be an icon name or an absolute path to an image on disk beginning with file:/
+#Icon=edit-bomb
+
+# Optional; replaces the default image caption on the Welcome page
+# Don't forget to offer translations of the text!
+#Comment=This is what a bomb looks like. Don't worry, you'll become very familiar with them!
+#Comment[fr]=Voici à quoi ressemble une bombe. Ne vous inquiétez pas, vous allez vous familiariser avec elles!
+
+# Optional; replaces the default URL opened when clicking on the Welcome page's image or icon
+URL=https://killallchickens.org

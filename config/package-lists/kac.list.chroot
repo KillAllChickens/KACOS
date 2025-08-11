@@ -1,0 +1,33 @@
+# KDE Plasma
+kde-plasma-desktop
+
+# Login Screen
+sddm
+
+# Network Manager
+network-manager-gnome
+
+# Installer
+calamares
+#calamares-settings-debian
+
+# boot screen
+plymouth
+plymouth-themes
+
+partitionmanager
+
+# Web browser (Only for live system)
+firefox-esr
+
+# Media
+vlc
+
+# Terminal
+kitty
+
+# other things
+pkexec
+dbus
+dbus-x11
+dbus-user-session

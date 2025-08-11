@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c "~/.local/bin/set-kac-wallpaper-once"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Set KAC Wallpaper (once)

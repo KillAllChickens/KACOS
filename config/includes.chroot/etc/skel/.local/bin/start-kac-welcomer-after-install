@@ -1,0 +1,19 @@
+#!/bin/bash
+
+MARKER="$HOME/.local/share/kac-welcome-shown"
+
+# Already set? Then quit
+[ -f "$MARKER" ] && exit 0
+
+# No live environment
+[[ $(hostname) == "kacos-live" ]] && exit 0
+
+while ! pgrep plasmashell >/dev/null; do
+    sleep 1
+done
+
+/usr/bin/kac-welcomer
+
+# Create empty marker file
+mkdir -p "$HOME/.local/share"
+: > "$MARKER"   # 0-byte file

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c "~/.local/bin/start-kac-welcomer-after-install"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Show KAC Welcomer (once)

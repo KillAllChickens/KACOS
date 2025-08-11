@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+VER="2025.7"
+
+lb config noauto \
+	--distribution trixie \
+	--iso-application "KACOS $VER" \
+	--iso-preparer "KillAllChickens <https://killallchickens.org>" \
+	--iso-publisher "Vance Perry <vance@killallchickens.org>" \
+	--iso-volume "KACOS $VER" \
+	--archive-areas "main contrib non-free non-free-firmware" \
+	--bootappend-live "boot=live components hostname=kacos-live" \
+	"${@}"

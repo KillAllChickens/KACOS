@@ -1,0 +1,9 @@
+[Plymouth Theme]
+Name=KACOS
+Description=KACOS default startup
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/kac
+ScriptFile=/usr/share/plymouth/themes/kac/kac.script
+

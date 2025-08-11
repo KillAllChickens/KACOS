@@ -1,0 +1,20 @@
+kac_bg = Image("kac.bg.png");
+
+screen_ratio = Window.GetHeight() / Window.GetWidth();
+bg_image_ratio = kac_bg.GetHeight()  / kac_bg.GetWidth();
+
+if (screen_ratio > bg_image_ratio)
+  {  # Screen ratio is taller than image ratio, we will match the screen height
+     scale_factor =  Window.GetHeight() / kac_bg.GetHeight();
+  }
+else
+  {  # Screen ratio is wider than image ratio, we will match the screen width
+     scale_factor =  Window.GetWidth() / kac_bg.GetWidth();
+  }
+scaled_bg_image = kac_bg.Scale(kac_bg.GetWidth()  * scale_factor,
+                                         kac_bg.GetHeight() * scale_factor);
+bg_sprite = Sprite(scaled_bg_image);
+
+bg_sprite.SetX(Window.GetWidth()  / 2 - scaled_bg_image.GetWidth()  / 2); 
+bg_sprite.SetY(Window.GetHeight() / 2 - scaled_bg_image.GetHeight() / 2);
+bg_sprite.SetZ(-10000);

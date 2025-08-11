@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+#LOG=$(lb build noauto "${@}" 2>&1)
+
+#echo "$LOG" > build.log
+
+lb build noauto "${@}" 2>&1 | tee build.log

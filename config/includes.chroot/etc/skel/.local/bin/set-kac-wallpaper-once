@@ -1,0 +1,24 @@
+#!/bin/bash
+MARKER="$HOME/.local/share/kac-style-set"
+WALLPAPER="/usr/share/wallpapers/KACOS/KAC-wallpaper.png"
+
+# Already set? Then quit
+[ -f "$MARKER" ] && exit 0
+
+while ! pgrep plasmashell >/dev/null; do
+    sleep 1
+done
+
+# Apply styles
+/usr/bin/plasma-apply-wallpaperimage "$WALLPAPER" >/dev/null 2>&1 || exit 0
+/usr/bin/plasma-apply-lookandfeel -a org.kde.breezedark.desktop
+# Run color scheme twice, its a bit wonky when only ran once
+/usr/bin/plasma-apply-colorscheme BreezeDark -a "#cc0000"
+/usr/bin/plasma-apply-colorscheme BreezeDark -a "#cc0000"
+
+
+
+# Create empty marker file
+mkdir -p "$HOME/.local/share"
+: > "$MARKER"   # 0-byte file
+
