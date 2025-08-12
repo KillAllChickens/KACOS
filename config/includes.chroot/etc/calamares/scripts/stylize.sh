@@ -7,12 +7,18 @@ for dir in /home/*; do
 	mv "$dir/Desktop/.brave-browser.desktop" "$dir/Desktop/brave-browser.desktop"
 done
 
+# UPDATE BOOTLOADER(Yippee!!!)
 
-install -Dm644 "/usr/share/plymouth/themes/kac/kac.bg.png" "/usr/share/grub/themes/kacos-background.png"
+bg_path="/usr/share/plymouth/themes/kac/kac.bg.png"
+grub_file="/etc/default/grub"
 
-# Set GRUB background
-sed -i 's|^#*GRUB_BACKGROUND=.*|GRUB_BACKGROUND="/usr/share/grub/themes/kacos-background.png"|' /etc/default/grub
+# If GRUB_BACKGROUND line exists, replace it, else append it
+if grep -q '^GRUB_BACKGROUND=' "$grub_file"; then
+    sed -i "s|^GRUB_BACKGROUND=.*|GRUB_BACKGROUND=\"$bg_path\"|" "$grub_file"
+else
+    echo "GRUB_BACKGROUND=\"$bg_path\"" | tee -a "$grub_file" > /dev/null
+fi
 
-# Update grub config
-grub-mkconfig -o /boot/grub/grub.cfg
+# Update GRUB config
+update-grub
 
