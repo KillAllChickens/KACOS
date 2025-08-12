@@ -1,0 +1,10 @@
+PRETTY_NAME="KACOS 2025.7 \"Kill 'em All\""
+NAME="KACOS 2025.7"
+VERSION_ID="2025.7"
+VERSION="2025.7 \"Kill 'em All\""
+VERSION_CODENAME=kacos
+DEBIAN_VERSION_FULL=13.0
+ID=kacos
+HOME_URL="https://killallchickens.org"
+SUPPORT_URL="mailto:admin@killallchickens.org"
+BUG_REPORT_URL="mailto:admin@killallchickens.org"
