@@ -14,7 +14,7 @@ for dir in /home/*; do
     rm -f "$dir/.config/plasma-welcomerc"
     #rm -f "$dir/.config/autostart/set-kac-wallpaper.desktop"
     rm -f "$dir/.local/share/kac-style-set"
-    rm -f "$dir/*.log"
+    rm -f "$dir/"*.log
 done
 
 # Ensure new users dont get the files in skel

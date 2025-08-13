@@ -22,3 +22,16 @@ fi
 # Update GRUB config
 update-grub
 
+# Update SDDM
+
+sddm_file="/etc/sddm.conf"
+
+if grep -q '^Current=' "$sddm_file"; then
+    sed -i "s|^Current=.*|Current=KACOS|" "$sddm_file"
+else
+    if ! grep -q '^\[Theme\]' "$sddm_file"; then
+        echo "[Theme]" | sudo tee -a "$sddm_file" > /dev/null
+    fi
+    echo "Current=KACOS" | sudo tee -a "$sddm_file" > /dev/null
+fi
+
