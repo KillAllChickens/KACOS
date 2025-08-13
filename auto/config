@@ -5,7 +5,7 @@ set -e
 VER="2025.7"
 
 lb config noauto \
-	--distribution trixie \
+	--distribution testing \
 	--iso-application "KACOS $VER" \
 	--iso-preparer "KillAllChickens <https://killallchickens.org>" \
 	--iso-publisher "Vance Perry <vance@killallchickens.org>" \
