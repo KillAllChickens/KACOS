@@ -2,7 +2,7 @@
 
 set -e
 
-VER="2025.7"
+VER="2025.08"
 
 lb config noauto \
 	--distribution testing \
